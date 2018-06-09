@@ -1,4 +1,4 @@
-var luhnNumber = function (num) {
+var check = function (num) {
   var numArray = num.toString().split("");
   for (let i = numArray.length - 2; i > - 1; i -= 2) {
     var doubleNum = Number(numArray[i]) * 2;
@@ -17,6 +17,4 @@ var luhnNumber = function (num) {
   return total % 10 === 0;
 }
 
-module.exports = luhnNumber;
-
-console.log(luhnNumber(6226995465300412));
+module.exports = check;
